@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1711632818 source:d:\programele mele\c++\proiect1v2\main.cpp
+	<iostream>
+	<string>
+	<vector>
+
