@@ -17,10 +17,10 @@ class Om{
         // std::string getPrenume(){
         //     return prenume;
         //}
-        void setNume(const std::string &nume){
+        void setNume(std::string nume){
             this->nume = nume;
         }
-        void setPrenume(const std::string &prenume){
+        void setPrenume(std::string prenume){
             this->prenume = prenume;
         }
 };
@@ -35,7 +35,7 @@ class Angajat : public Om{
         double getSalariu(){
             return salariu;
         }
-        void setSalariu(const double salariu){
+        void setSalariu(double salariu){
             this->salariu = salariu;
         }
 };
@@ -54,10 +54,10 @@ class Produs{
         double getPret(){
             return pret;
         }
-        void setNume(const std::string &nume){
+        void setNume(std::string nume){
             this->nume = nume;
         }
-        void setPret(const double pret){
+        void setPret(double pret){
             this->pret = pret;
         }
 };
@@ -85,7 +85,7 @@ class Cos{
         std::vector<Produs> getProduse(){
             return produse;
         }
-        double getPretTotal(const std::vector<Produs> &_produse){
+        double getPretTotal(std::vector<Produs> _produse){
             pret=0;
             for(auto it : _produse){
                 pret+=it.getPret();
@@ -145,7 +145,7 @@ class Bar{
         void adaugaAngajat(const Angajat &angajat){
             angajati.push_back(angajat);
         }
-        void adaugaProdus(const Produs &produs){
+        void adaugaProdus( Produs produs){
             produse.push_back(produs);
         }
         void PLaseazaComanda(const Comanda &comanda){
@@ -181,10 +181,10 @@ class Bar{
         const std::string& getAdresa(){
             return adresa;
         }
-        const Produs& getProdus(const int index){
+        Produs getProdus(int index){
             return produse[index-1];
         }
-        const std::vector<Produs>& getProduse(){
+        std::vector<Produs> getProduse(){
             return produse;
         }
         const std::vector<Comanda> &getComenzi(){
