@@ -67,10 +67,10 @@ class Cos{
         double pret;
         std::vector <Produs> produse;
     public:
-        void adaugaProdus(const Produs &_produs){
+        void adaugaProdus( Produs _produs){
             produse.push_back(_produs);
         }
-        void stergeProdus(const int index){
+        void stergeProdus( int index){
             produse.erase(produse.begin()+index-1);
         }
         void afiseazaProduse(){
